@@ -31,17 +31,17 @@ export default function Dashboard() {
 			</div>
 
 			<div className={'flex flex-col gap-4 px-6 pb-6'}>
-				{isLoading && Array.from({ length: 10 }).map((_, index) => (
-					<Skeleton key={`book-skeleton-${index}`} className={'h-12.5'} />
+				{isLoading && Array.from({ length: 5 }).map((_, index) => (
+					<Skeleton key={`book-skeleton-${index}`} className={'h-15'} />
 				))}
 
-				{books.length === 0 && (
+				{!isLoading && books.length === 0 && (
 					<Empty className={'bg-card'}>
 						<EmptyTitle>No Books Yet</EmptyTitle>
 					</Empty>
 				)}
 
-				{books.map((book) => (
+				{!isLoading && books.map((book) => (
 					<BookItem key={book.id} book={book}/>
 				))}
 			</div>
