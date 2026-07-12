@@ -1,0 +1,67 @@
+|-- .config
+|-- .editorconfig
+|-- .env
+|-- .gitignore
+|-- app
+    |-- (auth)
+        |-- layout.tsx
+        |-- login
+            |-- page.tsx
+        |-- sign-up
+            |-- page.tsx
+    |-- dashboard
+        |-- layout.tsx
+        |-- page.tsx
+    |-- favicon.ico
+    |-- globals.css
+    |-- layout.tsx
+    |-- page.tsx
+|-- components.json
+|-- env.collapse
+|-- eslint.config.mjs
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package.json
+|-- pnpm-lock.yaml
+|-- pnpm-workspace.yaml
+|-- postcss.config.mjs
+|-- presets.json
+|-- public
+    |-- file.svg
+    |-- globe.svg
+    |-- next.svg
+    |-- vercel.svg
+    |-- window.svg
+|-- README.md
+|-- src
+    |-- components
+        |-- reusable
+            |-- auth-loading.tsx
+            |-- text-editor.tsx
+        |-- ui
+            |-- accordion.tsx
+            |-- button.tsx
+            |-- card.tsx
+            |-- field.tsx
+            |-- input.tsx
+            |-- label.tsx
+            |-- separator.tsx
+            |-- sonner.tsx
+            |-- textarea.tsx
+    |-- features
+        |-- auth
+            |-- components
+                |-- auth-view.tsx
+                |-- login-form.tsx
+                |-- sign-up-form.tsx
+            |-- provider
+                |-- auth-provider.tsx
+    |-- hooks
+        |-- use-text-editor.tsx
+    |-- lib
+        |-- firebase
+            |-- client.ts
+        |-- utils.ts
+    |-- utils
+        |-- constants.ts
+|-- tsconfig.json

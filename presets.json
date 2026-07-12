@@ -1,0 +1,6 @@
+[
+	{
+		"url": "http://ui.shadcn.com/create?preset=b7kDghhTb1&base=radix&pointer=true",
+		"code": "pnpm dlx shadcn@latest init --preset b7kDghhTb1 --base radix --template next --pointer"
+	}
+]
