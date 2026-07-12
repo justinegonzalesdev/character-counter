@@ -2,7 +2,6 @@ import "./globals.css";
 
 import { Geist, Geist_Mono, Instrument_Sans, Inter } from "next/font/google";
 
-import { AuthProvider } from "@/features/auth/provider/auth-provider";
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
@@ -39,9 +38,7 @@ export default function RootLayout({
 		>
 			<body className="dark min-h-full flex flex-col">
 				<Toaster />
-				<AuthProvider>
-					{children}
-				</AuthProvider>
+				{children}
 			</body>
 		</html>
 	);

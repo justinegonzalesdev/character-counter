@@ -1,27 +1,27 @@
 "use client"
 
-import React, { useEffect } from "react"
+import React, { PropsWithChildren, useEffect } from "react";
 
 import AuthLoading from "@/components/reusable/auth-loading";
-import useCurrentUserStore from "@/features/auth/store/current-user-store";
+import useCurrentUserStore from "../store/current-user-store";
 import { useRouter } from "next/navigation";
 
-export default function AuthLayout(props: LayoutProps<"/">) {
+export default function AuthGuard(props: PropsWithChildren) {
 	const { isLoading, currentUser } = useCurrentUserStore();
 	const router = useRouter()
 
 	useEffect(() => {
 		if (isLoading) return;
-		if (currentUser) {
-			router.replace("/dashboard");
+		if(!currentUser) {
+			router.replace("/login");
 		}
 	}, [isLoading, currentUser, router]);
 
-	if (isLoading || currentUser) {
+	if (isLoading || !currentUser) {
 		return <AuthLoading/>
 	}
 
-	return (
+	return currentUser && (
 		<React.Fragment>
 			{props.children}
 		</React.Fragment>

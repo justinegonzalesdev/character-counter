@@ -16,6 +16,7 @@
     |-- globals.css
     |-- layout.tsx
     |-- page.tsx
+|-- cls
 |-- components.json
 |-- env.collapse
 |-- eslint.config.mjs
@@ -51,11 +52,12 @@
     |-- features
         |-- auth
             |-- components
+                |-- auth-guard.tsx
                 |-- auth-view.tsx
                 |-- login-form.tsx
                 |-- sign-up-form.tsx
-            |-- provider
-                |-- auth-provider.tsx
+            |-- store
+                |-- current-user-store.ts
     |-- hooks
         |-- use-text-editor.tsx
     |-- lib
